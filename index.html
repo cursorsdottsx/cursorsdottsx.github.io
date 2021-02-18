@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="cursorsdottsx" />
+        <meta name="description" content="A minimalistic fullstack developer that plays with discord.js on the side." />
+        <meta name="copyright" content="Vade 2021" />
+        <meta name="robots" content="follow" />
+        <meta name="theme-color" content="#01d7d7" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cursorsdottsx.github.io/" />
+        <meta property="og:site_name" content="cursorsdottsx" />
+        <meta property="og:locale" content="en-US" />
+        <meta property="og:title" content="cursorsdottsx" />
+        <meta property="og:description" content="A minimalistic fullstack developer that plays with discord.js on the side." />
+        <meta property="og:image" content="me.png" />
+
+        <title>cursorsdottsx</title>
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" href="me.png" type="image/x-icon" />
+    </head>
+    <body>
+        <div class="bg">
+            <img src="teach.png" alt="TeachFullstack" />
+        </div>
+
+        <div class="card">
+            <div class="profile">
+                <div>
+                    <img src="me.png" alt="me" id="link" />
+                </div>
+                <h1>cursorsdottsx</h1>
+            </div>
+            <p>A minimalistic fullstack developer that plays with discord.js on the side.</p>
+            <a href="https://www.aero-ware.github.io/">
+                <img src="aeroware.png" alt="" />
+            </a>
+        </div>
+        <!-- Hello, stranger. What can I help you with? -->
+        <script>
+            /**
+             * Because regular links and anchor tags suck,
+             * mess up your CSS, and are so boring,
+             * I've decided to use JavaScript for links.
+             */
+
+            const a = document.createElement("a");
+            a.href = "https://www.github.com/cursorsdottsx";
+            a.target = "_blank";
+            a.rel = "nofollow";
+
+            document.getElementById("link").addEventListener("click", a.click.bind(a));
+        </script>
+    </body>
+</html>
