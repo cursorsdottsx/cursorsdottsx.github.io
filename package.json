@@ -4,7 +4,7 @@
     "description": "my personal webpage now go away 👌",
     "main": "index.js",
     "scripts": {
-        "css": "tailwindcss-cli build -o tailwind.css",
+        "css": "tailwindcss-cli build style.css -c tailwind.config.js -o tailwind.css",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {

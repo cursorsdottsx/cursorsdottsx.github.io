@@ -2,7 +2,11 @@ module.exports = {
     purge: ["index.html"],
     darkMode: "class",
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                accent: "var(--accent)",
+            },
+        },
     },
     variants: {},
     plugins: [],
