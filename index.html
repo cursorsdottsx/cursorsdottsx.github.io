@@ -25,12 +25,34 @@
     </head>
     <body class="bg-gray-50 min-h-screen flex flex-col">
         <div class="content flex-1">
-            <main class="relative p-2">
+            <main id="main" class="bg-black bg-opacity-0 relative p-2" style="z-index: -10">
                 <div class="max-w-6xl mx-auto">
-                    <h1 class="lg:text-9xl sm:text-8xl select-none text-7xl text-gray-300 opacity-75 uppercase">PhD</h1>
-                    <h1 class="lg:text-9xl sm:text-8xl select-none text-7xl text-gray-300 opacity-75 uppercase">In</h1>
-                    <h1 class="lg:text-9xl sm:text-8xl select-none text-7xl text-gray-300 opacity-75 uppercase">TypeScript</h1>
+                    <h1 id="text-0" class="whitespace-nowrap lg:text-9xl sm:text-8xl select-none text-7xl text-gray-300 opacity-75 uppercase"></h1>
+                    <h1 id="text-1" class="whitespace-nowrap lg:text-9xl sm:text-8xl select-none text-7xl text-gray-300 opacity-75 uppercase"></h1>
+                    <h1 id="text-2" class="whitespace-nowrap lg:text-9xl sm:text-8xl select-none text-7xl text-gray-300 opacity-75 uppercase"></h1>
                 </div>
+                <script>
+                    const texts = [
+                        ["I have", "a PhD in", "TypeScript"],
+                        ["Minimal", "and", "elegant"],
+                        ["Who can", "read this", "regex"],
+                        ["Mispelt", "a variable", "name"],
+                        ["It's all NAND", "and always", "has been"],
+                        ["One", "plus one", "is ten"],
+                        ["Play Rust", "code Rust", "all day"],
+                        ["I don't", "know what", "I'm doing"],
+                        ["Drop", "table", "errors"],
+                        ["HTML is", "not a", "language"],
+                        ["CSS is", "not a", "language"],
+                        ["When your", "code", "compiles"],
+                    ];
+
+                    const text = texts[Math.floor(Math.random() * texts.length)];
+
+                    text.forEach((part, i) => {
+                        document.getElementById(`text-${i}`).textContent = part;
+                    });
+                </script>
                 <div class="absolute top-0 left-0 bottom-0 right-0 grid place-items-center z-10">
                     <div class="absolute flex flex-col items-center">
                         <div class="flex-1 lg:mb-2">
@@ -40,117 +62,210 @@
                     </div>
                 </div>
             </main>
-            <section class="bg-black bg-opacity-90 py-6 px-4 xl:py-10 xl:px-6">
-                <div class="flex flex-row gap-4 max-w-6xl mx-auto">
-                    <div class="flex-shrink-0 flex-1 flex flex-col md:flex-row lg:flex-col gap-2">
-                        <div class="flex flex-col gap-2">
-                            <h3 class="md:text-3xl text-2xl text-gray-300 opacity-80">Hi!</h3>
-                            <p class="xl:text-base md:text-sm text-xs text-gray-200">
-                                I'm [Cursors], a fullstack developer that is open to learning new things (except Angular)! I'm pretty much addicted to TypeScript, and in my free time when I'm
-                                not working on the next big project, I like to contribute to open source projects or chill on Discord!
-                            </p>
+            <div class="bg-gray-50 z-10">
+                <section class="bg-black bg-opacity-90 py-6 px-4 xl:py-10 xl:px-6">
+                    <div class="flex flex-row gap-4 max-w-6xl mx-auto">
+                        <div class="flex-shrink-0 flex-1 flex flex-col md:flex-row lg:flex-col gap-2">
+                            <div class="flex flex-col gap-2">
+                                <h3 class="md:text-3xl text-2xl text-gray-300 opacity-80">Hi!</h3>
+                                <p class="xl:text-base md:text-sm text-xs text-gray-200">
+                                    I'm [Cursors], a fullstack developer that is open to learning new things (except Angular)! I'm pretty much addicted to TypeScript, and in my free time when
+                                    I'm not working on the next big project, I like to contribute to open source projects or chill on Discord!
+                                </p>
+                            </div>
+                            <div class="flex-shrink-0 grid md:place-items-center lg:place-items-start grid-cols-3 sm:grid-cols-5 gap-2 lg:text-base text-sm text-gray-500 select-none">
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://developer.mozilla.org/en-US/docs/Web/HTML/">HTML</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://developer.mozilla.org/en-US/docs/Web/CSS/">CSS</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/">JavaScript</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://www.typescriptlang.org/">TypeScript</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://tailwindcss.com/">Tailwind CSS</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://reactjs.org/">React</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://nextjs.org/">Next.js</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://expressjs.com/">Express.js</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://graphql.org/">GraphQL</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://nestjs.com/">Nest.js</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://typeorm.io/">TypeORM</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://en.wikipedia.org/wiki/SQL/">SQL</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://www.postgresql.org/">PostgreSQL</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://www.sqlite.org/index.html/">SQLite</a>
+                                <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://www.mongodb.com/">MongoDB</a>
+                            </div>
                         </div>
-                        <div class="flex-shrink-0 grid md:place-items-center lg:place-items-start grid-cols-3 sm:grid-cols-5 gap-2 lg:text-base text-sm text-gray-500 select-none">
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://developer.mozilla.org/en-US/docs/Web/HTML/">HTML</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://developer.mozilla.org/en-US/docs/Web/CSS/">CSS</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/">JavaScript</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://www.typescriptlang.org/">TypeScript</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://tailwindcss.com/">Tailwind CSS</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://reactjs.org/">React</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://nextjs.org/">Next.js</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://expressjs.com/">Express.js</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://graphql.org/">GraphQL</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://nestjs.com/">Nest.js</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://typeorm.io/">TypeORM</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://en.wikipedia.org/wiki/SQL/">SQL</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://www.postgresql.org/">PostgreSQL</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://www.sqlite.org/index.html/">SQLite</a>
-                            <a target="_blank" rel="nofollow" class="hover:text-accent transition-colors" href="https://www.mongodb.com/">MongoDB</a>
+                        <div class="lg:flex flex-col gap-2 flex-1 hidden">
+                            <h2 class="lg:text-xl text-gray-100 text-lg">Organizations</h2>
+                            <div class="flex flex-wrap gap-2">
+                                <a target="_blank" rel="nofollow" href="https://www.github.com/InfinitelyTyped/">
+                                    <img class="w-20 h-20 xl:w-24 xl:h-24 rounded" src="assets/infinitelytyped.png" alt="InfinitelyTyped" />
+                                </a>
+                                <a target="_blank" rel="nofollow" href="https://www.github.com/TypeScript-Cult/">
+                                    <img class="w-20 h-20 xl:w-24 xl:h-24 rounded" src="assets/ts.png" alt="TypeScriptCult" />
+                                </a>
+                                <a target="_blank" rel="nofollow" href="https://www.github.com/aero-ware/">
+                                    <img class="w-20 h-20 xl:w-24 xl:h-24 rounded" src="assets/aeroware.png" alt="AeroWare" />
+                                </a>
+                                <a target="_blank" rel="nofollow" href="https://www.github.com/NovaProjects/">
+                                    <img class="w-20 h-20 xl:w-24 xl:h-24 rounded" src="assets/nova.png" alt="NovaOpenSource" />
+                                </a>
+                                <a target="_blank" rel="nofollow" href="https://www.github.com/sterilejs/">
+                                    <img class="w-20 h-20 xl:w-24 xl:h-24 rounded" src="assets/s.png" alt="SterileJS" />
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="lg:flex flex-col gap-2 flex-1 hidden">
-                        <h2 class="lg:text-xl text-gray-100 text-lg">Organizations</h2>
-                        <div class="flex flex-wrap gap-2">
-                            <a target="_blank" rel="nofollow" href="https://www.github.com/InfinitelyTyped/">
-                                <img class="w-20 h-20 xl:w-24 xl:h-24 rounded" src="assets/infinitelytyped.png" alt="InfinitelyTyped" />
+                </section>
+                <section class="py-6 px-4 xl:py-10 xl:px-6">
+                    <div class="max-w-6xl mx-auto">
+                        <h1 class="lg:text-4xl sm:text-3xl md:mb-4 text-2xl text-gray-300 opacity-75 uppercase mb-2">Stalk me on</h1>
+                        <div class="flex gap-2">
+                            <a target="_blank" rel="nofollow" href="https://github.com/cursorsdottsx/">
+                                <img class="max-h-24" src="assets/gh.png" alt="GitHub" />
                             </a>
-                            <a target="_blank" rel="nofollow" href="https://www.github.com/TypeScript-Cult/">
-                                <img class="w-20 h-20 xl:w-24 xl:h-24 rounded" src="assets/ts.png" alt="TypeScriptCult" />
+                            <a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCWCRM3WGPjS6c1DrwfiaU6g/">
+                                <img class="max-h-24" src="assets/yt.png" alt="YouTube" />
                             </a>
-                            <a target="_blank" rel="nofollow" href="https://www.github.com/aero-ware/">
-                                <img class="w-20 h-20 xl:w-24 xl:h-24 rounded" src="assets/aeroware.png" alt="AeroWare" />
+                            <a target="_blank" rel="nofollow" href="https://twitter.com/cursorsdottsx/">
+                                <img class="max-h-24" src="assets/tw.png" alt="Twitter" />
                             </a>
-                            <a target="_blank" rel="nofollow" href="https://www.github.com/NovaProjects/">
-                                <img class="w-20 h-20 xl:w-24 xl:h-24 rounded" src="assets/nova.png" alt="NovaOpenSource" />
-                            </a>
-                            <a target="_blank" rel="nofollow" href="https://www.github.com/sterilejs/">
-                                <img class="w-20 h-20 xl:w-24 xl:h-24 rounded" src="assets/s.png" alt="SterileJS" />
+                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/163725925563693/">
+                                <img class="max-h-24" src="assets/fb.png" alt="Facebook" />
                             </a>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section class="py-6 px-4 xl:py-10 xl:px-6">
-                <div class="max-w-6xl mx-auto">
-                    <h1 class="lg:text-4xl sm:text-3xl md:mb-4 text-2xl text-gray-300 opacity-75 uppercase mb-2">Stalk me on</h1>
-                    <div class="flex gap-2">
-                        <a target="_blank" rel="nofollow" href="https://github.com/cursorsdottsx/">
-                            <img class="max-h-24" src="assets/gh.png" alt="GitHub" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://www.youtube.com/channel/UCWCRM3WGPjS6c1DrwfiaU6g/">
-                            <img class="max-h-24" src="assets/yt.png" alt="YouTube" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://twitter.com/cursorsdottsx/">
-                            <img class="max-h-24" src="assets/tw.png" alt="Twitter" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://www.facebook.com/163725925563693/">
-                            <img class="max-h-24" src="assets/fb.png" alt="Facebook" />
-                        </a>
+                </section>
+                <section class="bg-black bg-opacity-90 py-6 px-4 xl:py-10 xl:px-6">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="flex flex-col gap-4">
+                            <h3 class="lg:text-4xl sm:text-3xl text-2xl text-gray-50">Projects</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="https://vade-bot.com/">
+                                    <div class="relative">
+                                        <img class="md:w-28 md:h-28 w-24 h-24 rounded bg-white" src="assets/vade.jpeg" alt="Vade" />
+                                        <div
+                                            class="text-gray-50 absolute top-0 left-0 bottom-0 right-0 grid place-items-center opacity-0 hover:opacity-100 transition-opacity z-10 bg-black bg-opacity-50"
+                                        >
+                                            <p class="md:text-xl sm:text-lg">Vade</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://cursorsdottsx.github.io/notebook/">
+                                    <div class="relative">
+                                        <div class="bg-white p-2 rounded grid place-items-center">
+                                            <img class="md:w-24 md:h-24 w-20 h-20 rounded bg-white" src="assets/nb.png" alt="Notebook" />
+                                        </div>
+                                        <div
+                                            class="text-gray-50 absolute top-0 left-0 bottom-0 right-0 grid place-items-center opacity-0 hover:opacity-100 transition-opacity z-10 bg-black bg-opacity-50"
+                                        >
+                                            <p class="md:text-xl sm:text-lg">Notebook</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://top.gg/bot/808056326881280041/">
+                                    <div class="relative">
+                                        <img class="md:w-28 md:h-28 w-24 h-24 rounded bg-white" src="assets/kali.png" alt="Kali" />
+                                        <div
+                                            class="text-gray-50 absolute top-0 left-0 bottom-0 right-0 grid place-items-center opacity-0 hover:opacity-100 transition-opacity z-10 bg-black bg-opacity-50"
+                                        >
+                                            <p class="md:text-xl sm:text-lg">Kali</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://www.npmjs.com/package/spotifyx/">
+                                    <div class="relative">
+                                        <img class="md:w-28 md:h-28 w-24 h-24 rounded bg-white" src="assets/spotify.png" alt="Spotify" />
+                                        <div
+                                            class="text-gray-50 absolute top-0 left-0 bottom-0 right-0 grid place-items-center opacity-0 hover:opacity-100 transition-opacity z-10 bg-black bg-opacity-50"
+                                        >
+                                            <p class="md:text-xl sm:text-lg">Spotifyx</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://balls.cursorsdev.repl.co/">
+                                    <div class="relative">
+                                        <div class="bg-white p-2 rounded grid place-items-center">
+                                            <div class="md:w-24 md:h-24 w-20 h-20 rounded-full bg-blue-400"></div>
+                                        </div>
+                                        <div
+                                            class="text-gray-50 absolute top-0 left-0 bottom-0 right-0 grid place-items-center opacity-0 hover:opacity-100 transition-opacity z-10 bg-black bg-opacity-50"
+                                        >
+                                            <p class="md:text-xl sm:text-lg">Balls</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="https://gameoflife.cursorsdev.repl.co/">
+                                    <div class="relative">
+                                        <div class="bg-black p-6 rounded grid place-items-center">
+                                            <div class="md:w-16 md:h-16 w-12 h-12 bg-white"></div>
+                                        </div>
+                                        <div
+                                            class="text-gray-50 absolute top-0 left-0 bottom-0 right-0 grid place-items-center opacity-0 hover:opacity-100 transition-opacity z-10 bg-black bg-opacity-50"
+                                        >
+                                            <p class="md:text-xl sm:text-lg">Life</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </section>
-            <section class="py-6 px-4 xl:py-10 xl:px-6">
-                <div class="max-w-6xl mx-auto">
-                    <h1 class="sm:text-7xl md:mb-4 text-5xl text-gray-300 opacity-75 uppercase mb-2">Repos</h1>
-                    <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-                        <a target="_blank" rel="nofollow" href="https://github.com/InfinitelyTyped/TSCompute/">
-                            <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=InfinitelyTyped&repo=TSCompute" alt="TSCompute" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://github.com/InfinitelyTyped/InfinitelyTyped/">
-                            <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=InfinitelyTyped&repo=InfinitelyTyped" alt="InfinitelyTyped" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://github.com/cursorsdottsx/notebook/">
-                            <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=cursorsdottsx&repo=notebook" alt="notebook" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://github.com/cursorsdottsx/spotify/">
-                            <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=cursorsdottsx&repo=spotify" alt="spotify" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://github.com/sterilejs/typeof/">
-                            <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=sterilejs&repo=typeof" alt="typeof" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://github.com/cursorsdottsx/url-shortener/">
-                            <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=cursorsdottsx&repo=url-shortener" alt="url-shortener" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://github.com/cursorsdottsx/balls/">
-                            <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=cursorsdottsx&repo=balls" alt="balls" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://github.com/aero-ware/kali/">
-                            <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=aero-ware&repo=kali" alt="kali" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://github.com/aero-ware/aeroclient/">
-                            <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=aero-ware&repo=aeroclient" alt="aeroclient" />
-                        </a>
-                        <a target="_blank" rel="nofollow" href="https://github.com/aero-ware/overload.js/">
-                            <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=aero-ware&repo=overload.js" alt="overload.js" />
-                        </a>
+                </section>
+                <section class="py-6 px-4 xl:py-10 xl:px-6">
+                    <div class="max-w-6xl mx-auto">
+                        <h1 class="sm:text-7xl md:mb-4 text-5xl text-gray-300 opacity-75 uppercase mb-2">Repos</h1>
+                        <div class="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                            <a target="_blank" rel="nofollow" href="https://github.com/InfinitelyTyped/TSCompute/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=InfinitelyTyped&repo=TSCompute" alt="TSCompute" />
+                            </a>
+                            <a target="_blank" rel="nofollow" href="https://github.com/InfinitelyTyped/InfinitelyTyped/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=InfinitelyTyped&repo=InfinitelyTyped" alt="InfinitelyTyped" />
+                            </a>
+                            <a target="_blank" rel="nofollow" href="https://github.com/cursorsdottsx/notebook/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=cursorsdottsx&repo=notebook" alt="notebook" />
+                            </a>
+                            <a target="_blank" rel="nofollow" href="https://github.com/cursorsdottsx/spotify/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=cursorsdottsx&repo=spotify" alt="spotify" />
+                            </a>
+                            <a target="_blank" rel="nofollow" href="https://github.com/sterilejs/typeof/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=sterilejs&repo=typeof" alt="typeof" />
+                            </a>
+                            <a target="_blank" rel="nofollow" href="https://github.com/cursorsdottsx/url-shortener/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=cursorsdottsx&repo=url-shortener" alt="url-shortener" />
+                            </a>
+                            <a target="_blank" rel="nofollow" href="https://github.com/cursorsdottsx/diskord/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=cursorsdottsx&repo=diskord" alt="diskord" />
+                            </a>
+                            <a target="_blank" rel="nofollow" href="https://github.com/cursorsdottsx/balls/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=cursorsdottsx&repo=balls" alt="balls" />
+                            </a>
+                            <a target="_blank" rel="nofollow" href="https://github.com/im-lonely/new-tab-mono/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=im-lonely&repo=new-tab-mono" alt="new-tab-mono" />
+                            </a>
+                            <a target="_blank" rel="nofollow" href="https://github.com/aero-ware/kali/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=aero-ware&repo=kali" alt="kali" />
+                            </a>
+                            <a target="_blank" rel="nofollow" href="https://github.com/aero-ware/aeroclient/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=aero-ware&repo=aeroclient" alt="aeroclient" />
+                            </a>
+                            <a target="_blank" rel="nofollow" href="https://github.com/aero-ware/overload.js/">
+                                <img class="w-full" src="https://github-readme-stats.vercel.app/api/pin/?username=aero-ware&repo=overload.js" alt="overload.js" />
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </div>
-        <footer class="flex-shrink-0 bg-black bg-opacity-90 grid place-items-center">
-            <div class="flex items-center gap-4 max-w-6xl mx-auto px-4 py-3 text-gray-50 text-sm lg:text-base">
-                <p>Made with ❤️ by cursorsdottsx</p>
+                </section>
             </div>
-        </footer>
+            <footer class="flex-shrink-0 bg-black bg-opacity-90 grid place-items-center">
+                <div class="flex items-center gap-4 max-w-6xl mx-auto px-4 py-3 text-gray-50 text-sm lg:text-base">
+                    <p>Made with ❤️ by cursorsdottsx</p>
+                </div>
+            </footer>
+        </div>
+        <script>
+            window.addEventListener("scroll", (e) => {
+                const target = document.getElementById("main");
+
+                const scrolled = window.pageYOffset;
+                const rate = scrolled * 0.5;
+
+                target.style.transform = `translate3d(0, ${rate}px, 0)`;
+            });
+        </script>
     </body>
 </html>
